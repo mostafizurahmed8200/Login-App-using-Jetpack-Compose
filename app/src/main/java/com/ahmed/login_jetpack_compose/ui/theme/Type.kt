@@ -1,4 +1,4 @@
-package com.ahmed.learncompose.ui.theme
+package com.ahmed.login_jetpack_compose.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

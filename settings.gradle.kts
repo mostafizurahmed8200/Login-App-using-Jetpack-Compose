@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "LearnCompose"
+rootProject.name = "Login-App-using-Jetpack-Compose"
 include(":app")

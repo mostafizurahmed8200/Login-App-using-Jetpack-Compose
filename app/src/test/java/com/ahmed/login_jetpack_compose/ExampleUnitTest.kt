@@ -1,4 +1,4 @@
-package com.ahmed.learncompose
+package com.ahmed.login_jetpack_compose
 
 import org.junit.Test
 
