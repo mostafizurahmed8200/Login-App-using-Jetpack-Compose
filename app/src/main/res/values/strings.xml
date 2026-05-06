@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">LearnCompose</string>
+    <string name="welcome">Welcome</string>
+    <string name="create_account">Sign in or create an account</string>
+    <string name="email">Email</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="register_password">Register Your Password</string>
+    <string name="registered_email">Registered Email</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
 </resources>

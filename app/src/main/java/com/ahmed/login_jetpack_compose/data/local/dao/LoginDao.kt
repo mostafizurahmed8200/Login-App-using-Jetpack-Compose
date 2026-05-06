@@ -16,7 +16,7 @@ interface LoginDao {
     suspend fun getLoginByEmailAndPassword(email: String, password: String): LoginEntity?
 
     @Query("Select * from tbl_login where email=:email limit 1")
-    suspend fun getLoginByEmail(email: String)
+    suspend fun getLoginByEmail(email: String): LoginEntity?
 
     @Query("Update tbl_login set password =:newPassword where email=:email")
     suspend fun updatePassword(email: String,newPassword: String): Int

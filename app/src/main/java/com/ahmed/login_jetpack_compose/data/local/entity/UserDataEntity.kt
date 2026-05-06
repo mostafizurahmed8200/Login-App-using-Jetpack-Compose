@@ -4,15 +4,18 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.ForeignKey.Companion.CASCADE
+import androidx.room.Index
 import androidx.room.PrimaryKey
 
 @Entity(
-    tableName = "tbl_userdata", foreignKeys = [ForeignKey(
+    tableName = "tbl_userdata",
+    foreignKeys = [ForeignKey(
         entity = LoginEntity::class,
         parentColumns = ["userId"],
         childColumns = ["userId"],
         onDelete = CASCADE
-    )]
+    )],
+    indices = [Index(value = ["userId"])]
 )
 data class UserDataEntity(
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id") val id: Int = 0,
