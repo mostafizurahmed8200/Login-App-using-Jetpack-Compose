@@ -78,7 +78,7 @@ fun ForgetPasswordScreen(
             Spacer(32.dp)
             OutlinedTextField(
                 value = uiState.email,
-                onValueChange = viewModel::onEmailChange,
+                onValueChange = { viewModel.onEmailChange(it) },
                 label = { Text(stringResource(R.string.registered_email)) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
                 singleLine = true,
@@ -87,7 +87,7 @@ fun ForgetPasswordScreen(
             Spacer(16.dp)
             OutlinedTextField(
                 value = uiState.newPassword,
-                onValueChange = viewModel::onNewPasswordChange,
+                onValueChange = { viewModel.onNewPasswordChange(it) },
                 label = { Text(stringResource(R.string.new_password)) },
                 visualTransformation = PasswordVisualTransformation(),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
@@ -97,7 +97,7 @@ fun ForgetPasswordScreen(
             Spacer(16.dp)
             OutlinedTextField(
                 value = uiState.confirmPassword,
-                onValueChange = viewModel::onConfirmPasswordChange,
+                onValueChange = { viewModel.onConfirmPasswordChange(it) },
                 label = { Text(stringResource(R.string.confirm_password)) },
                 visualTransformation = PasswordVisualTransformation(),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
@@ -121,7 +121,7 @@ fun ForgetPasswordScreen(
                 CircularProgressIndicator(color = Color.Red)
             } else {
                 Button(
-                    onClick = viewModel::onUpdatePasswordClick,
+                    onClick = { viewModel.onUpdatePasswordClick() },
                     modifier = Modifier.fillMaxWidth(),
                     contentPadding = PaddingValues(vertical = 14.dp)
                 ) { Text("Update Password", fontSize = 16.sp) }

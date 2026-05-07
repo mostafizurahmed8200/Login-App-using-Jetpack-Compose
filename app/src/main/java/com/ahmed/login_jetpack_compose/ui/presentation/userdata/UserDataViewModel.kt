@@ -83,6 +83,7 @@ class UserDataViewModel @Inject constructor(
             }, onFailure = { throwable ->
                 _uiState.update {
                     it.copy(
+                        isLoading = false,
                         errorMessage = throwable.message ?: "Failed to add user data"
                     )
                 }

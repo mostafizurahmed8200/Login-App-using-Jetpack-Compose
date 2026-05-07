@@ -2,10 +2,13 @@ package com.ahmed.login_jetpack_compose.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.navArgument
 import com.ahmed.login_jetpack_compose.ui.presentation.forgetpassword.ForgetPasswordScreen
 import com.ahmed.login_jetpack_compose.ui.presentation.login.LoginScreen
+import com.ahmed.login_jetpack_compose.ui.presentation.userdata.UserDataScreen
 
 
 @Composable
@@ -36,6 +39,14 @@ fun AppNavGraph(navController: NavHostController) {
         }
 
         // User Data Screen
+        composable(
+            route = Screen.UserData.route,
+            arguments = listOf(navArgument("userId") {
+                type = NavType.StringType
+            })
+        ) {
+            UserDataScreen()
+        }
 
     }
 }
